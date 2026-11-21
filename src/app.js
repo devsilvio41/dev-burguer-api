@@ -5,7 +5,7 @@ import cors from "cors";
 import "dotenv/config";
 
 const app = express();
-app.use(cors({ origin: "http://localhost:5173" }));
+app.use(cors({ origin: process.env.CORS_ORIGIN }));
 app.use(express.json()); // 🔧 precisa vir ANTES das rotas
 app.use(express.urlencoded({ extended: true }));
 
